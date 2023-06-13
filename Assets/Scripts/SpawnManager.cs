@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using System.IO;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class SpawnManager : MonoBehaviour
     private float nextSpawnTime; // waktu spawn berikutnya
     private int spawnCount; // jumlah GameObject yang telah di-spawn
     
-    private int score;
+    [HideInInspector] public int score;
     [SerializeField] TMP_Text scoreText;
 
     void Start()

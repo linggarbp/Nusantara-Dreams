@@ -1,0 +1,8 @@
+killScore
+13
+totalItem
+20
+totalTransition
+4
+npcDialog
+3

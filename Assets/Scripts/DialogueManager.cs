@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     //[SerializeField] private Animator portraitAnimator;
     //private Animator layoutAnimator;
 
+    [HideInInspector] public int npcDialog;
     private Story currentStory;
 
     private bool canContinueToNextLine = false;
@@ -71,6 +72,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        npcDialog++;
 
         ContinueStory();
     }

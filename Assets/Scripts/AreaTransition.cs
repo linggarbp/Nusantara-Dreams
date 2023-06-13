@@ -7,6 +7,7 @@ public class AreaTransition : MonoBehaviour
     public Vector2 cameraChange;
     public Vector3 playerChange;
     private CameraMovement cam;
+    [HideInInspector] public int countTransition;
 
     public bool TriggeredOnce = false;
 
@@ -23,6 +24,7 @@ public class AreaTransition : MonoBehaviour
             cam.minPosition += cameraChange;
             cam.maxPosition += cameraChange;
             collision.transform.position += playerChange;
+            countTransition++;
         }
     }
 }
