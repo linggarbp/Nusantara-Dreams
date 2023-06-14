@@ -1,2 +1,2 @@
-Hai #speaker:Seorang Misterius
+Hai #speaker:???
 Halo #speaker:Jeki
