@@ -34,7 +34,7 @@ public class SpawnManager : MonoBehaviour
         if (Time.time >= nextSpawnTime && spawnCount < maxSpawnCount)
         {
             // Membuat random koordinat spawn
-            Vector2 spawnPosition = new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange));
+            Vector2 spawnPosition = new Vector2(Random.Range(-xRange, xRange), Random.Range(-yRange, yRange+30));
 
             // Cek jarak antara GameObject yang sudah ada dengan posisi spawn
             Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, minDistance);

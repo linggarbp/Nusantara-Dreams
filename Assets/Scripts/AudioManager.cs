@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] AudioSource sfxMenu;
+    [SerializeField] AudioSource sfxStep;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void SfxBtn()
     {
-        
+        sfxMenu.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SfxStep()
     {
-        
+        sfxStep.Play();
+    }
+
+    public void SfxStepStop()
+    {
+        sfxStep.Stop();
     }
 }

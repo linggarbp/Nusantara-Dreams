@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Golden Egg
   itemDesc: The mystic egg have a god power
   itemImage: {fileID: 2020390276, guid: 354ff23f10ea0774bb3f9f8da2ea639f, type: 3}
-  numberHeld: 7
+  numberHeld: 0
   usable: 0
   unique: 1
   thisEvent:

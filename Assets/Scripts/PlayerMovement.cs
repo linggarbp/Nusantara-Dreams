@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 movement;
     private Animator animator;
+    [SerializeField] AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,21 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //Player Movement
+        if (currentState == PlayerState.Walk &&
+            Input.GetKeyDown("w") ||
+            Input.GetKeyDown("a") ||
+            Input.GetKeyDown("s") ||
+            Input.GetKeyDown("d"))
+        {
+            audioManager.SfxStep();
+        }
+        //else if (currentState != PlayerState.Walk &&
+        //    Input.GetKeyUp("w") ||
+        //    Input.GetKeyUp("a") ||
+        //    Input.GetKeyUp("s") ||
+        //    Input.GetKeyUp("d"))
+        //{
+        //}
 
         if (!DialogueManager.GetInstance().dialogueIsPlaying)
         {
@@ -74,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("moving", false);
+            audioManager.SfxStepStop();
         }
     }
 

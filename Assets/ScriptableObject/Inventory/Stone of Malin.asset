@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Stone of Malin
   itemDesc: The stone from malin body
   itemImage: {fileID: -567513940, guid: c93419d61bd284b41b3565a8b7a79c19, type: 3}
-  numberHeld: 1
+  numberHeld: 0
   usable: 0
   unique: 1
   thisEvent:
