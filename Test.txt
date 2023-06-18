@@ -1,8 +1,8 @@
 killScore
-13
+2
 totalItem
-20
+1
 totalTransition
-4
+0
 npcDialog
-3
+0

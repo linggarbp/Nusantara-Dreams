@@ -6,10 +6,10 @@ using System.IO;
 
 public class UnityAnalytics : MonoBehaviour
 {
-    [SerializeField] SpawnManager[] killScore;
-    [SerializeField] InventoryItem[] item;
-    [SerializeField] AreaTransition[] transition;
-    [SerializeField] DialogueManager dialog;
+    [SerializeField] SpawnManager[] killScores;
+    [SerializeField] InventoryItem[] items;
+    [SerializeField] AreaTransition[] transitions;
+    [SerializeField] DialogueManager dialogs;
 
     void Update()
     {
@@ -17,33 +17,33 @@ public class UnityAnalytics : MonoBehaviour
 
         sw.WriteLine("killScore");
         int totalScore = 0;
-        for (int i = 0; i < killScore.Length; i++)
+        for (int i = 0; i < killScores.Length; i++)
         {
-            totalScore += killScore[i].score;
+            totalScore += killScores[i].score;
         }
         sw.WriteLine(totalScore);
 
 
         sw.WriteLine("totalItem");
         int totalItem = 0;
-        for (int i = 0; i < item.Length; i++)
+        for (int i = 0; i < items.Length; i++)
         {
-            totalItem += item[i].numberHeld;
+            totalItem += items[i].numberHeld;
         }
         sw.WriteLine(totalItem);
 
 
         sw.WriteLine("totalTransition");
         int totalTransition = 0;
-        for (int i = 0; i < transition.Length; i++)
+        for (int i = 0; i < transitions.Length; i++)
         {
-            totalTransition += transition[i].countTransition;
+            totalTransition += transitions[i].countTransition;
         }
         sw.WriteLine(totalTransition);
 
 
         sw.WriteLine("npcDialog");
-        sw.WriteLine(dialog.npcDialog);
+        sw.WriteLine(dialogs.npcDialog);
 
         //Close the file
         sw.Close();

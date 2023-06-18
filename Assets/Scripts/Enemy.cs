@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             //gameObject.SetActive(false);
-            killCount += 1;
+            killCount++;
             Destroy(gameObject);
             int randomIndex = Random.Range(0, prefabsToSpawn.Count);
             Instantiate(prefabsToSpawn[randomIndex], targetObject.transform.position, Quaternion.identity);

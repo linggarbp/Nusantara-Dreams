@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     {
         inventoryPanel.SetActive(false);
         pausePanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         ingamePanel.SetActive(true);
     }
 
@@ -33,12 +35,15 @@ public class GameManager : MonoBehaviour
         {
             inventoryPanel.SetActive(true);
             isInventoryActivePanel = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
         else if (Input.GetKeyDown(KeyCode.Tab) && isInventoryActivePanel)
         {
             inventoryPanel.SetActive(false);
             isInventoryActivePanel = false;
-
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
@@ -48,6 +53,8 @@ public class GameManager : MonoBehaviour
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 
@@ -55,10 +62,19 @@ public class GameManager : MonoBehaviour
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 }

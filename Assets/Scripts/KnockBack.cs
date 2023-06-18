@@ -7,13 +7,26 @@ public class KnockBack : MonoBehaviour
     public float thrust;
     public float knockTime = .3f;
     public float damage;
+    [SerializeField] GameObject gameOverPanel;
+    [SerializeField] InventoryItem[] items;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.CompareTag("breakable") && this.gameObject.CompareTag("Player"))
-        //{
-        //    collision.GetComponent<pot>().Smash();
-        //}
+        if (collision.gameObject.CompareTag("GameOver") &&
+            items[0].numberHeld >= 9 &&
+            items[1].numberHeld >= 7 &&
+            items[2].numberHeld >= 1)
+        {
+            Debug.Log("Game Over");
+            Time.timeScale = 0f;
+            gameOverPanel.SetActive(true);
+        }
+
+        if (collision.gameObject.CompareTag("Breakable"))
+        {
+            collision.GetComponent<Pot>().Smash();
+        }
+
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Player"))
         {
             Rigidbody2D hit = collision.GetComponent<Rigidbody2D>();

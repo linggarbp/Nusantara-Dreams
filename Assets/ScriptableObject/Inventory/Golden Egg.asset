@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d615ec5cb4b4949bb0f7807737413c, type: 3}
+  m_Name: Golden Egg
+  m_EditorClassIdentifier: 
+  itemName: Golden Egg
+  itemDesc: The mystic egg have a god power
+  itemImage: {fileID: 2020390276, guid: 354ff23f10ea0774bb3f9f8da2ea639f, type: 3}
+  numberHeld: 7
+  usable: 0
+  unique: 1
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls: []
