@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxMenu: {fileID: 9229015}
+  sfxStep: {fileID: 0}
 --- !u!1 &43103244
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,7 +6058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nusantara Dreams
+  m_text: RuneLogica
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
   m_sharedMaterial: {fileID: -5475696518824154773, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}

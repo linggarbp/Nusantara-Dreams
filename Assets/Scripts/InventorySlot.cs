@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Linq.Expressions;
+using System;
 
 public class InventorySlot : MonoBehaviour
 {
@@ -11,25 +13,25 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private Image itemImage;
 
     [Header("Variables from the Item")]
-    public InventoryItem thisItem;
-    public InventoryManager thisManager;
+    public InventoryItem inventoryItem;
+    public InventoryManager inventoryManager;
 
     public void Setup(InventoryItem newItem, InventoryManager newManager)
     {
-        thisItem = newItem;
-        thisManager = newManager;
-        if (thisItem)
+        inventoryItem = newItem;
+        inventoryManager = newManager;
+        if (inventoryItem)
         {
-            itemImage.sprite = thisItem.itemImage;
-            itemCountText.text = "" + thisItem.numberHeld;
+            itemImage.sprite = inventoryItem.itemImage;
+            itemCountText.text = "" + inventoryItem.numberHeld;
         }
     }
 
     public void ClickedOn()
     {
-        if (thisItem)
+        if (inventoryItem)
         {
-            thisManager.SetupDescAndButton(thisItem.itemDesc, thisItem.usable, thisItem);
+            inventoryManager.SetupDescAndButton(inventoryItem.itemDesc, inventoryItem.usable, inventoryItem);
         }
     }
 }

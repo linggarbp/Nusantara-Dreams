@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8998668696646670342}
   - component: {fileID: -7651465100900788814}
   m_Layer: 0
-  m_Name: EnemyLog
+  m_Name: EnemyLogBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,8 +33,8 @@ Transform:
   m_GameObject: {fileID: 8998668696646670350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_Sprite: {fileID: 1404066151, guid: 48033a5d87ab76a42b41538cdf90ff86, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0.39215687, b: 0.39215687, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   health: 0
   enemyName: Zod
   baseAttack: 1
-  moveSpeed: 1.5
+  moveSpeed: 3
   killCount: 0
   sfxHit: {fileID: -7651465100900788814}
   prefabsToSpawn:

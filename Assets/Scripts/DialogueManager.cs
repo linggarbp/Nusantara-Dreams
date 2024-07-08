@@ -35,9 +35,8 @@ public class DialogueManager : MonoBehaviour
     private bool canSkip = false;
     private bool submitSkip;
 
-    private static DialogueManager instance;
-
     private const string SPEAKER_TAG = "speaker";
+    private static DialogueManager instance;
 
     private void Awake()
     {

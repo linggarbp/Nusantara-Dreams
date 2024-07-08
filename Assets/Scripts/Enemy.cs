@@ -20,8 +20,12 @@ public class Enemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed = 2f;
     public int killCount = 0;
-    [SerializeField] AudioSource sfxHit;
-
+    [SerializeField]
+    AudioSource sfxHit;
+    [SerializeField]
+    List<GameObject> unlockSkill;
+    [SerializeField]
+    List<GameObject> enemyKillable;
     public List<GameObject> prefabsToSpawn; // Prefab GameObject yang akan di-spawn
     public GameObject targetObject; // GameObject target yang akan dijadikan tempat spawn
 
@@ -30,10 +34,19 @@ public class Enemy : MonoBehaviour
         health = maxHealth.initialValue;
     }
 
+    private void OnDestroy()
+    {
+        unlockSkill[0].SetActive(false);
+        unlockSkill[1].SetActive(true);
+    }
+
     public void TakeDamage(float damage)
     {
         sfxHit.Play();
-        health -= damage;
+        if (enemyKillable[0].activeSelf || enemyKillable[1].activeSelf)
+        {
+            health -= damage;
+        }
         if (health <= 0)
         {
             //gameObject.SetActive(false);

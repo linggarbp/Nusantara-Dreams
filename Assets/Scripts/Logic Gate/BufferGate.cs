@@ -8,6 +8,7 @@ public class BufferGate : Gate
     {
         if (inputGates.Count > 1)
         {
+            
             Debug.LogError("'Buffer Gates' cannot have more than 1 input gate");
             return;
         }

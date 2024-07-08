@@ -10,21 +10,21 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject blankInvetorySlot;
     [SerializeField] private GameObject contentPanel;
     [SerializeField] private TextMeshProUGUI descText;
-    [SerializeField] private GameObject useButton;
+    //[SerializeField] private GameObject useButton;
     public InventoryItem currentItem;
 
-    public void SetTextAndButton(string desc, bool buttonActive)
-    {
-        descText.text = desc;
-        if (buttonActive)
-        {
-            useButton.SetActive(true);
-        }
-        else
-        {
-            useButton.SetActive(false);
-        }
-    }
+    //public void SetTextAndButton(string desc, bool buttonActive)
+    //{
+    //    descText.text = desc;
+    //    if (buttonActive)
+    //    {
+    //        useButton.SetActive(true);
+    //    }
+    //    else
+    //    {
+    //        useButton.SetActive(false);
+    //    }
+    //}
 
     void MakeInventorySlots()
     {
@@ -51,14 +51,14 @@ public class InventoryManager : MonoBehaviour
     {
         ClearInventorySlots();
         MakeInventorySlots();
-        SetTextAndButton("", false);
+        //SetTextAndButton("", false);
     }
 
     public void SetupDescAndButton(string desc, bool isButtonUsable, InventoryItem newItem)
     {
         currentItem = newItem;
         descText.text = desc;
-        useButton.SetActive(isButtonUsable);
+        //useButton.SetActive(isButtonUsable);
     }
 
     void ClearInventorySlots()
@@ -69,20 +69,25 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void UseButtonPressed()
+    private void Update()
     {
-        if (currentItem)
-        {
-            currentItem.Use();
-
-            ClearInventorySlots();
-
-            MakeInventorySlots();
-
-            if (currentItem.numberHeld == 0)
-            {
-                SetTextAndButton("", false);
-            }
-        }
+        
     }
 }
+
+//public void UseButtonPressed()
+//{
+//    if (currentItem)
+//    {
+//        currentItem.Use();
+
+//        ClearInventorySlots();
+
+//        MakeInventorySlots();
+
+//        if (currentItem.numberHeld == 0)
+//        {
+//            SetTextAndButton("", false);
+//        }
+//    }
+//}

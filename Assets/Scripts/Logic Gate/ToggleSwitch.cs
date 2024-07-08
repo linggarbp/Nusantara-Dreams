@@ -10,11 +10,6 @@ public class ToggleSwitch : MonoBehaviour
         switchToToggle = GetComponent<Switch>();
     }
 
-    private void Start()
-    {
-
-    }
-
     public void ToggleClick()
     {
         switchToToggle.Interact();
