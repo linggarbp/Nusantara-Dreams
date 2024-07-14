@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject ingamePanel;
     private bool isInventoryActivePanel = false;
     private bool isPauseActivePanel = false;
+
+    [HideInInspector] public int score;
+    [SerializeField] TMP_Text scoreText;
     //private Enemy totalScore;
 
     void Start()
@@ -21,11 +24,13 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         ingamePanel.SetActive(true);
+        score = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        scoreText.text = "" + score;
 
         //Pause Game
         GamePause();

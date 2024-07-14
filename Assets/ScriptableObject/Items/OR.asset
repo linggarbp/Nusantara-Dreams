@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09d615ec5cb4b4949bb0f7807737413c, type: 3}
-  m_Name: Book of Jonggrang
+  m_Name: OR
   m_EditorClassIdentifier: 
-  itemName: Book of Jonggrang
-  itemDesc: The diary book from Roro Jonggrang
-  itemImage: {fileID: -636346653, guid: 354ff23f10ea0774bb3f9f8da2ea639f, type: 3}
-  numberHeld: 1
+  itemName: 
+  itemDesc: 
+  itemImage: {fileID: 0}
+  numberHeld: 0
   usable: 0
-  unique: 1
+  unique: 0
   thisEvent:
     m_PersistentCalls:
       m_Calls: []

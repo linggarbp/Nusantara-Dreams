@@ -36,6 +36,10 @@ public class SwapGate : Gate
     [SerializeField]
     List<GameObject> gateListXNOR = new List<GameObject>();
 
+    private void Awake()
+    {
+        ORGate = true;
+    }
 
     public SwapGate(bool state) : base(state) { }
 
@@ -135,73 +139,73 @@ public class SwapGate : Gate
         }
     }
 
-    public void EnableRune()
-    {
-        if (gateOneORAND == 1 || gateTwoORAND == 1 || gateThreeORAND == 1)
-        {
-            gateListOR[1].SetActive(true);
-            gateListOR[2].SetActive(false);
-        }
-        else if (gateOneORAND == 2 || gateTwoORAND == 2 || gateThreeORAND == 2)
-        {
-            gateListAND[1].SetActive(true);
-            gateListAND[2].SetActive(false);
-        }
-        else if (gateOneNORNAND == 1 || gateTwoNORNAND == 1 || gateThreeNORNAND == 1)
-        {
-            gateListOR[1].SetActive(true);
-            gateListOR[2].SetActive(false);
-        }
-        else if (gateOneNORNAND == 2 || gateTwoNORNAND == 2 || gateThreeNORNAND == 2)
-        {
-            gateListAND[1].SetActive(true);
-            gateListAND[2].SetActive(false);
-        }
-        else if (gateOneXORXNOR == 1 || gateTwoXORXNOR == 1 || gateThreeXORXNOR == 1)
-        {
-            gateListOR[1].SetActive(true);
-            gateListOR[2].SetActive(false);
-        }
-        else if (gateOneXORXNOR == 2 || gateTwoXORXNOR == 2 || gateThreeXORXNOR == 2)
-        {
-            gateListAND[1].SetActive(true);
-            gateListAND[2].SetActive(false);
-        }
-    }
+    //public void EnableRune()
+    //{
+    //    if (gateOneORAND == 1 || gateTwoORAND == 1 || gateThreeORAND == 1)
+    //    {
+    //        gateListOR[1].SetActive(true);
+    //        gateListOR[2].SetActive(false);
+    //    }
+    //    else if (gateOneORAND == 2 || gateTwoORAND == 2 || gateThreeORAND == 2)
+    //    {
+    //        gateListAND[1].SetActive(true);
+    //        gateListAND[2].SetActive(false);
+    //    }
+    //    else if (gateOneNORNAND == 1 || gateTwoNORNAND == 1 || gateThreeNORNAND == 1)
+    //    {
+    //        gateListOR[1].SetActive(true);
+    //        gateListOR[2].SetActive(false);
+    //    }
+    //    else if (gateOneNORNAND == 2 || gateTwoNORNAND == 2 || gateThreeNORNAND == 2)
+    //    {
+    //        gateListAND[1].SetActive(true);
+    //        gateListAND[2].SetActive(false);
+    //    }
+    //    else if (gateOneXORXNOR == 1 || gateTwoXORXNOR == 1 || gateThreeXORXNOR == 1)
+    //    {
+    //        gateListOR[1].SetActive(true);
+    //        gateListOR[2].SetActive(false);
+    //    }
+    //    else if (gateOneXORXNOR == 2 || gateTwoXORXNOR == 2 || gateThreeXORXNOR == 2)
+    //    {
+    //        gateListAND[1].SetActive(true);
+    //        gateListAND[2].SetActive(false);
+    //    }
+    //}
 
-    public void DisableRune()
-    {
-        if (gateOneORAND == 1 || gateTwoORAND == 1 || gateThreeORAND == 1)
-        {
-            gateListOR[1].SetActive(false);
-            gateListOR[2].SetActive(true);
-        }
-        else if (gateOneORAND == 2 || gateTwoORAND == 2 || gateThreeORAND == 2)
-        {
-            gateListAND[1].SetActive(false);
-            gateListAND[2].SetActive(true);
-        }
-        else if (gateOneNORNAND == 1 || gateTwoNORNAND == 1 || gateThreeNORNAND == 1)
-        {
-            gateListOR[1].SetActive(false);
-            gateListOR[2].SetActive(true);
-        }
-        else if (gateOneNORNAND == 2 || gateTwoNORNAND == 2 || gateThreeNORNAND == 2)
-        {
-            gateListAND[1].SetActive(false);
-            gateListAND[2].SetActive(true);
-        }
-        else if (gateOneXORXNOR == 1 || gateTwoXORXNOR == 1 || gateThreeXORXNOR == 1)
-        {
-            gateListOR[1].SetActive(false);
-            gateListOR[2].SetActive(true);
-        }
-        else if (gateOneXORXNOR == 2 || gateTwoXORXNOR == 2 || gateThreeXORXNOR == 2)
-        {
-            gateListAND[1].SetActive(false);
-            gateListAND[2].SetActive(true);
-        }
-    }
+    //public void DisableRune()
+    //{
+    //    if (gateOneORAND == 1 || gateTwoORAND == 1 || gateThreeORAND == 1)
+    //    {
+    //        gateListOR[1].SetActive(false);
+    //        gateListOR[2].SetActive(true);
+    //    }
+    //    else if (gateOneORAND == 2 || gateTwoORAND == 2 || gateThreeORAND == 2)
+    //    {
+    //        gateListAND[1].SetActive(false);
+    //        gateListAND[2].SetActive(true);
+    //    }
+    //    else if (gateOneNORNAND == 1 || gateTwoNORNAND == 1 || gateThreeNORNAND == 1)
+    //    {
+    //        gateListOR[1].SetActive(false);
+    //        gateListOR[2].SetActive(true);
+    //    }
+    //    else if (gateOneNORNAND == 2 || gateTwoNORNAND == 2 || gateThreeNORNAND == 2)
+    //    {
+    //        gateListAND[1].SetActive(false);
+    //        gateListAND[2].SetActive(true);
+    //    }
+    //    else if (gateOneXORXNOR == 1 || gateTwoXORXNOR == 1 || gateThreeXORXNOR == 1)
+    //    {
+    //        gateListOR[1].SetActive(false);
+    //        gateListOR[2].SetActive(true);
+    //    }
+    //    else if (gateOneXORXNOR == 2 || gateTwoXORXNOR == 2 || gateThreeXORXNOR == 2)
+    //    {
+    //        gateListAND[1].SetActive(false);
+    //        gateListAND[2].SetActive(true);
+    //    }
+    //}
 
     public void Swap()
     {
@@ -230,32 +234,31 @@ public class SwapGate : Gate
         {
             Interact();
         }
-
     }
 
     void IsItemExist()
     {
+        //if (playerInventory.InventoryItems[0].numberHeld == 1)
+        //{
+        //    ORGate = true;
+        //}
         if (playerInventory.InventoryItems[0].numberHeld == 1)
-        {
-            ORGate = true;
-        }
-        else if (playerInventory.InventoryItems[1].numberHeld == 1)
         {
             ANDGate = true;
         }
-        else if (playerInventory.InventoryItems[2].numberHeld == 1)
+        else if (playerInventory.InventoryItems[1].numberHeld == 1)
         {
             NORGate = true;
         }
-        else if (playerInventory.InventoryItems[3].numberHeld == 1)
+        else if (playerInventory.InventoryItems[2].numberHeld == 1)
         {
             NANDGate = true;
         }
-        else if (playerInventory.InventoryItems[4].numberHeld == 1)
+        else if (playerInventory.InventoryItems[3].numberHeld == 1)
         {
             XORGate = true;
         }
-        else if (playerInventory.InventoryItems[5].numberHeld == 1)
+        else if (playerInventory.InventoryItems[4].numberHeld == 1)
         {
             XNORGate = true;
         }
@@ -263,7 +266,7 @@ public class SwapGate : Gate
 
     private int GetORANDItem()
     {
-        return playerInventory.InventoryItems[0].numberHeld + playerInventory.InventoryItems[1].numberHeld;
+        return /*playerInventory.InventoryItems[0].numberHeld */1 + playerInventory.InventoryItems[0].numberHeld;
     }
 
     private int GetNORNANDItem()
@@ -282,10 +285,11 @@ public class SwapGate : Gate
         Swap();
         if (gateOneORAND > GetORANDItem())
         {
-            gateOneORAND = 0;
-            gateListOR[0].SetActive(false);
-            gateListAND[0].SetActive(false);
+            gateOneORAND = 1;
+            //gateListOR[0].SetActive(false);
+            //gateListAND[0].SetActive(false);
         }
+        Swap();
     }
     public void GateTwoORAND()
     {
@@ -293,10 +297,11 @@ public class SwapGate : Gate
         Swap();
         if (gateTwoORAND > GetORANDItem())
         {
-            gateTwoORAND = 0;
-            gateListOR[0].SetActive(false);
-            gateListAND[0].SetActive(false);
+            gateTwoORAND = 1;
+            //gateListOR[0].SetActive(false);
+            //gateListAND[0].SetActive(false);
         }
+        Swap();
     }
     public void GateThreeORAND()
     {
@@ -304,10 +309,11 @@ public class SwapGate : Gate
         Swap();
         if (gateThreeORAND > GetORANDItem())
         {
-            gateThreeORAND = 0;
-            gateListOR[0].SetActive(false);
-            gateListAND[0].SetActive(false);
+            gateThreeORAND = 1;
+            //gateListOR[0].SetActive(false);
+            //gateListAND[0].SetActive(false);
         }
+        Swap();
     }
     public void GateOneNORNAND()
     {
@@ -342,7 +348,7 @@ public class SwapGate : Gate
             gateListNAND[0].SetActive(false);
         }
     }
-    
+
     public void GateOneXORXNOR()
     {
         gateOneXORXNOR++;

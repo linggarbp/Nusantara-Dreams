@@ -5,25 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
-    public void PlayGame()
+    public void PlayGameOne()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SkripsiLevel01");
+    }
+
+    public void PlayGameTwo()
+    {
+        SceneManager.LoadScene("SkripsiLevel02");
+    }
+
+    public void PlayGameThree()
+    {
+        SceneManager.LoadScene("SkripsiLevel03");
+    }
+
+    public void PlayGameFour()
+    {
+        SceneManager.LoadScene("SkripsiLevel04");
+    }
+
+    public void PlayGameFive()
+    {
+        SceneManager.LoadScene("SkripsiLevel05");
     }
 
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

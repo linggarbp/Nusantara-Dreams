@@ -8,7 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3a39745d8ff7ce341902321edff0228f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SkripsiLevel01.unity
+    guid: cd516c4592ec6ee44893123d05083789
+  - enabled: 1
+    path: Assets/Scenes/SkripsiLevel02.unity
+    guid: 11907428ada1b414b92ed2a7ed0243a3
+  - enabled: 1
+    path: Assets/Scenes/SkripsiLevel03.unity
+    guid: a528431d83f106e4c942608a9f79c098
+  - enabled: 1
+    path: Assets/Scenes/SkripsiLevel04.unity
+    guid: 8891491a2c49fcb479c76d1b93f44660
+  - enabled: 1
+    path: Assets/Scenes/SkripsiLevel05.unity
+    guid: aa1642cc347a99746849eb90e64a0175
   m_configObjects: {}

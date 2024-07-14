@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public enum EnemyState
@@ -19,7 +18,9 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed = 2f;
-    public int killCount = 0;
+    public int killPoint = 0;
+    [SerializeField]
+    private GameManager gameManager;
     [SerializeField]
     AudioSource sfxHit;
     [SerializeField]
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
     {
         unlockSkill[0].SetActive(false);
         unlockSkill[1].SetActive(true);
+        gameManager.score = killPoint;
     }
 
     public void TakeDamage(float damage)
@@ -50,7 +52,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             //gameObject.SetActive(false);
-            killCount++;
+            killPoint = killPoint + 100;
             Destroy(gameObject);
             int randomIndex = Random.Range(0, prefabsToSpawn.Count);
             Instantiate(prefabsToSpawn[randomIndex], targetObject.transform.position, Quaternion.identity);
