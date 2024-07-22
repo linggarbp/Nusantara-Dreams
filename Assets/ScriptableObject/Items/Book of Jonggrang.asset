@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Book of Jonggrang
   itemDesc: The diary book from Roro Jonggrang
   itemImage: {fileID: -636346653, guid: 354ff23f10ea0774bb3f9f8da2ea639f, type: 3}
-  numberHeld: 1
+  numberHeld: 0
   usable: 0
   unique: 1
   thisEvent:

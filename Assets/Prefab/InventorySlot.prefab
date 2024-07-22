@@ -94,8 +94,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemCountText: {fileID: 2855499949000231268}
   itemImage: {fileID: 2855499948861781113}
-  thisItem: {fileID: 0}
-  thisManager: {fileID: 0}
+  inventoryItem: {fileID: 0}
+  inventoryManager: {fileID: 0}
 --- !u!114 &3345748126326048442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2855499949000231271
 RectTransform:
   m_ObjectHideFlags: 0

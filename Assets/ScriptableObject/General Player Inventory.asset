@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: General Player Inventory
   m_EditorClassIdentifier: 
   InventoryItems:
-  - {fileID: 11400000, guid: fc9435e8b8f346a49b3df2e9bd0f8874, type: 2}
-  - {fileID: 11400000, guid: ed0e6aea36996074384dd3426a330921, type: 2}
-  - {fileID: 11400000, guid: 32979b88fca039d47bd78352d631c61b, type: 2}
-  - {fileID: 11400000, guid: fc9435e8b8f346a49b3df2e9bd0f8874, type: 2}
-  - {fileID: 11400000, guid: ed0e6aea36996074384dd3426a330921, type: 2}
-  - {fileID: 11400000, guid: 32979b88fca039d47bd78352d631c61b, type: 2}
+  - {fileID: 11400000, guid: 56447f56903a4e14da05851a3d4ab1d7, type: 2}
+  - {fileID: 11400000, guid: 0bdb985b148c8734bb29f9f2101edf26, type: 2}
+  - {fileID: 11400000, guid: a8c7575b6abfc7c478eeac477eb25bb4, type: 2}
+  - {fileID: 11400000, guid: 121840e922218654caa4ee9ef6757e5e, type: 2}
+  - {fileID: 11400000, guid: 9197cd9c568480f459a229873d1ddd65, type: 2}
+  - {fileID: 11400000, guid: 4972bce584cc56d4c94cb4f54c212e7d, type: 2}

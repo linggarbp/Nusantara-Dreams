@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     List<GameObject> unlockSkill;
     [SerializeField]
-    List<GameObject> enemyKillable;
+    GameObject enemyKillable;
     public List<GameObject> prefabsToSpawn; // Prefab GameObject yang akan di-spawn
     public GameObject targetObject; // GameObject target yang akan dijadikan tempat spawn
 
@@ -35,17 +35,10 @@ public class Enemy : MonoBehaviour
         health = maxHealth.initialValue;
     }
 
-    private void OnDestroy()
-    {
-        unlockSkill[0].SetActive(false);
-        unlockSkill[1].SetActive(true);
-        gameManager.score = killPoint;
-    }
-
     public void TakeDamage(float damage)
     {
         sfxHit.Play();
-        if (enemyKillable[0].activeSelf || enemyKillable[1].activeSelf)
+        if (enemyKillable.activeSelf)
         {
             health -= damage;
         }
@@ -54,6 +47,9 @@ public class Enemy : MonoBehaviour
             //gameObject.SetActive(false);
             killPoint = killPoint + 100;
             Destroy(gameObject);
+            unlockSkill[0].SetActive(false);
+            unlockSkill[1].SetActive(true);
+            gameManager.score = killPoint;
             int randomIndex = Random.Range(0, prefabsToSpawn.Count);
             Instantiate(prefabsToSpawn[randomIndex], targetObject.transform.position, Quaternion.identity);
         }

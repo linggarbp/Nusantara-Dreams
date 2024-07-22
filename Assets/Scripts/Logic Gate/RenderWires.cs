@@ -13,6 +13,5 @@ public class RenderWires : MonoBehaviour
         {
             Debug.DrawLine(transform.position, gate.transform.position, gate.ActiveState ? Color.green : Color.red, 0.01f, true);
         }
-
     }
 }

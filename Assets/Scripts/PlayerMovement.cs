@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movement;
     private Animator animator;
     [SerializeField] AudioManager audioManager;
+    [SerializeField] GameObject inventoryPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +61,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack
             && currentState != PlayerState.Stagger)
         {
-            StartCoroutine(AttackCo());
+            if (!(!DialogueManager.GetInstance().dialogueIsPlaying && inventoryPanel.activeSelf))
+            {
+                StartCoroutine(AttackCo());
+            }
         }
         else if (currentState == PlayerState.Walk || currentState == PlayerState.Idle)
         {
