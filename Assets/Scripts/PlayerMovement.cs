@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (rb != null)
         {
+            Debug.Log("Attacked");
             yield return new WaitForSeconds(knockTime);
             rb.velocity = Vector2.zero;
             currentState = PlayerState.Idle;

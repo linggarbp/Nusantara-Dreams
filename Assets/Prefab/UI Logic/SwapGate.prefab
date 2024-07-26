@@ -315,7 +315,6 @@ GameObject:
   - component: {fileID: 7479204735272687981}
   - component: {fileID: 7479204735272687969}
   - component: {fileID: 7479204735272687968}
-  - component: {fileID: 7479204735272687971}
   - component: {fileID: 7479204735272687970}
   - component: {fileID: 7479204735272687974}
   m_Layer: 5
@@ -383,83 +382,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7479204735272687971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7479204735272687980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 501bab0c179669e40b2ccdc3f12d86a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputGates:
-  - {fileID: 0}
-  - {fileID: 0}
-  outputGates: []
-  onEnableEvents:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7479204736974801997}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 7479204736389373842}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onDisableEvents:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7479204736974801997}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7479204736389373842}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  playerInventory: {fileID: 11400000, guid: 95fe8385b7b29f0489b9bbd6a3a72bac, type: 2}
-  gateListOR: {fileID: 0}
-  gateListAND: {fileID: 0}
-  gateListNOR: {fileID: 0}
-  gateListNAND: {fileID: 0}
-  gateListXOR: {fileID: 0}
-  gateListXNOR: {fileID: 0}
 --- !u!114 &7479204735272687970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,9 +426,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7479204735272687971}
+      - m_Target: {fileID: 7479204736216844596}
         m_TargetAssemblyTypeName: SwapGate, Assembly-CSharp
-        m_MethodName: GateORAND
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -617,6 +539,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7479204736216844597}
   - component: {fileID: 7479204736216844584}
+  - component: {fileID: 643753810206224874}
+  - component: {fileID: 8801475051940716884}
   m_Layer: 5
   m_Name: SwapGate
   m_TagString: Untagged
@@ -661,6 +585,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7479204736216844596}
   m_CullTransparentMesh: 1
+--- !u!114 &643753810206224874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479204736216844596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501bab0c179669e40b2ccdc3f12d86a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputGates:
+  - {fileID: 0}
+  - {fileID: 0}
+  outputGates: []
+  onEnableEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7479204736974801997}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7479204736389373842}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDisableEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7479204736974801997}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7479204736389373842}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  playerInventory: {fileID: 11400000, guid: 95fe8385b7b29f0489b9bbd6a3a72bac, type: 2}
+  gateListOR: {fileID: 0}
+  gateListAND: {fileID: 0}
+  gateListNOR: {fileID: 0}
+  gateListNAND: {fileID: 0}
+  gateListXOR: {fileID: 0}
+  gateListXNOR: {fileID: 0}
+--- !u!114 &8801475051940716884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7479204736216844596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ed736f2c6ca6b48ac726e32b429328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7479204736339260628
 GameObject:
   m_ObjectHideFlags: 0

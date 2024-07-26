@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3993497376646394561}
   - component: {fileID: 3993497376646394564}
   - component: {fileID: 3993497376646394567}
+  - component: {fileID: 5446055369486054256}
   m_Layer: 5
   m_Name: NAND
   m_TagString: Untagged
@@ -117,6 +118,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &5446055369486054256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993497376646394560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ed736f2c6ca6b48ac726e32b429328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3993497376905942342
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3993497377764750275
 RectTransform:
   m_ObjectHideFlags: 0

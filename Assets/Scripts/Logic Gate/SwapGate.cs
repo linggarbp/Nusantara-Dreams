@@ -17,18 +17,12 @@ public class SwapGate : Gate
     private int gateNORNAND;
     private int gateXORXNOR;
 
-    [SerializeField]
-    GameObject gateListOR;
-    [SerializeField]
-    GameObject gateListAND;
-    [SerializeField]
-    GameObject gateListNOR;
-    [SerializeField]
-    GameObject gateListNAND;
-    [SerializeField]
-    GameObject gateListXOR;
-    [SerializeField]
-    GameObject gateListXNOR;
+    public GameObject gateListOR;
+    public GameObject gateListAND;
+    public GameObject gateListNOR;
+    public GameObject gateListNAND;
+    public GameObject gateListXOR;
+    public GameObject gateListXNOR;
 
     private void Awake()
     {
@@ -240,19 +234,19 @@ public class SwapGate : Gate
         {
             ANDGate = true;
         }
-        else if (playerInventory.InventoryItems[2].numberHeld >= 1)
+        if (playerInventory.InventoryItems[2].numberHeld >= 1)
         {
             NORGate = true;
         }
-        else if (playerInventory.InventoryItems[3].numberHeld >= 1)
+        if (playerInventory.InventoryItems[3].numberHeld >= 1)
         {
             NANDGate = true;
         }
-        else if (playerInventory.InventoryItems[4].numberHeld >= 1)
+        if (playerInventory.InventoryItems[4].numberHeld >= 1)
         {
             XORGate = true;
         }
-        else if (playerInventory.InventoryItems[5].numberHeld >= 1)
+        if (playerInventory.InventoryItems[5].numberHeld >= 1)
         {
             XNORGate = true;
         }

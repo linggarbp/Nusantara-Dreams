@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Breakable
   - GameOver
+  - ORAND
+  - NORNAND
+  - XORXNOR
   layers:
   - Default
   - TransparentFX

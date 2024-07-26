@@ -6,15 +6,15 @@ public class InteractSwitch : MonoBehaviour
 {
     [Header("Visual & Trigger")]
     [SerializeField] private GameObject visualCue;
-    [SerializeField] private GameObject trigger;
     [SerializeField] private GameObject bound;
 
+    [SerializeField]
     private Switch switchToToggle;
     private bool playerInRange;
 
     private void Awake()
     {
-        switchToToggle = GetComponent<Switch>();
+        //switchToToggle = GetComponent<Switch>();
         playerInRange = false;
         visualCue.SetActive(false);
     }
