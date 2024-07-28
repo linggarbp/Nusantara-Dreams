@@ -14,9 +14,11 @@ public class GameManager : MonoBehaviour
     private bool isPauseActivePanel = false;
 
     [HideInInspector] public int score;
+    [HideInInspector] public int star;
     [HideInInspector] public int point;
-    [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text starText;
     [SerializeField] TMP_Text pointText;
+    public StarPointInventory StarPointInventory;
     //private Enemy totalScore;
 
     void Start()
@@ -32,8 +34,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        star = StarPointInventory.starPoints[0].numberHeld;
+        point = StarPointInventory.starPoints[1].numberHeld;
+        starText.text = "" + star;
         pointText.text = "" + point;
-        scoreText.text = "" + score;
 
         //Pause Game
         GamePause();

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2178184390383780494}
   - component: {fileID: 2178184390383780489}
   - component: {fileID: 2178184390383780488}
+  - component: {fileID: 5440174195199858436}
   m_Layer: 0
   m_Name: Points
-  m_TagString: Untagged
+  m_TagString: Point
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,5 +110,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.66, y: 0.56}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &5440174195199858436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178184390383780490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe0de409d5bf6d40bb77e5f85128f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starPointInventory: {fileID: 11400000, guid: f32411aad5141da45bbc379dc8ee5510, type: 2}
+  starPoint: {fileID: 11400000, guid: 6898a6aa0efb8ee489294ca835f81a47, type: 2}

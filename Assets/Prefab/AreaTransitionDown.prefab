@@ -71,7 +71,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e3a821cacd12c41acdf4bd963e155b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starPointInventory: {fileID: 11400000, guid: f32411aad5141da45bbc379dc8ee5510, type: 2}
+  starReq: -1
+  pointReq: -1
+  gateOpenable: []
   cameraChange: {x: 0, y: -28}
-  playerChange: {x: 0, y: -1.5, z: 0}
+  playerChange: {x: 0, y: -2, z: 0}
   countTransition: 0
   TriggeredOnce: 0

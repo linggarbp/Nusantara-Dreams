@@ -597,9 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 501bab0c179669e40b2ccdc3f12d86a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputGates:
-  - {fileID: 0}
-  - {fileID: 0}
+  inputGates: []
   outputGates: []
   onEnableEvents:
     m_PersistentCalls:

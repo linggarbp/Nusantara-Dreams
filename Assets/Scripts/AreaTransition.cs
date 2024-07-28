@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class AreaTransition : MonoBehaviour
 {
+    public StarPointInventory starPointInventory;
+    public int starReq = -1;
+    public int pointReq = -1;
+    [SerializeField]
+    List<GameObject> gateOpenable;
+
     public Vector2 cameraChange;
     public Vector3 playerChange;
     private CameraMovement cam;
@@ -17,14 +23,34 @@ public class AreaTransition : MonoBehaviour
         cam = Camera.main.GetComponent<CameraMovement>();
     }
 
+    private void Update()
+    {
+        if (starPointInventory.starPoints[0].numberHeld >= starReq && starPointInventory.starPoints[1].numberHeld >= pointReq)
+        {
+            gateOpenable[0].SetActive(false);
+        }
+        else
+        {
+            gateOpenable[0].SetActive(true);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            cam.minPosition += cameraChange;
-            cam.maxPosition += cameraChange;
-            collision.transform.position += playerChange;
-            countTransition++;
+            //if (starPointInventory.starPoints[0].numberHeld >= starReq && starPointInventory.starPoints[1].numberHeld >= pointReq)
+            //{
+                ChangeCamera(collision);
+            //}
         }
+    }
+
+    void ChangeCamera(Collider2D collision)
+    {
+        cam.minPosition += cameraChange;
+        cam.maxPosition += cameraChange;
+        collision.transform.position += playerChange;
+        countTransition++;
     }
 }
