@@ -14,17 +14,21 @@ public enum PlayerState
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Transform checkpointTransform;
+    public int playerHealth = 5;
     public PlayerState currentState;
     public float moveSpeed = 4f;
     private Rigidbody2D rb;
     private Vector3 movement;
     private Animator animator;
+    public AudioSource playerHurt;
     [SerializeField] AudioManager audioManager;
     [SerializeField] GameObject inventoryPanel;
 
     // Start is called before the first frame update
     void Start()
     {
+        //transform.position = checkpointTransform.position;
         currentState = PlayerState.Walk;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -113,11 +117,26 @@ public class PlayerMovement : MonoBehaviour
     {
         if (rb != null)
         {
-            Debug.Log("Attacked");
+            playerHealth--;
+            playerHurt.Play();
+            //Debug.Log("Attacked");
             yield return new WaitForSeconds(knockTime);
             rb.velocity = Vector2.zero;
             currentState = PlayerState.Idle;
             rb.velocity = Vector2.zero;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            checkpointTransform = collision.gameObject.transform;
+        }
+    }
+
+    public void RespawnPlayer()
+    {
+        transform.position = checkpointTransform.position;
     }
 }

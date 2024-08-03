@@ -9,6 +9,8 @@ TagManager:
   - GameOver
   - Star
   - Point
+  - AreaTransition
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

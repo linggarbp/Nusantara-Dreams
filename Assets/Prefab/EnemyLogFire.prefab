@@ -145,7 +145,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03034854, y: -0.46596932}
+  m_Offset: {x: -0.03034854, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -156,7 +156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7070241, y: 0.5681634}
+  m_Size: {x: 0.7070241, y: 1.23}
   m_EdgeRadius: 0
 --- !u!61 &8998668696646670337
 BoxCollider2D:
@@ -202,8 +202,10 @@ MonoBehaviour:
   enemyName: Zod
   baseAttack: 1
   moveSpeed: 1.5
-  killCount: 0
+  gameManager: {fileID: 0}
   sfxHit: {fileID: -7651465100900788814}
+  unlockSkill: []
+  enemyKillable: []
   prefabsToSpawn:
   - {fileID: 2178184390383780490, guid: e21c787079db7fa4db9bc5ba5a1de4b0, type: 3}
   targetObject: {fileID: 8998668696646670350}
@@ -225,8 +227,6 @@ MonoBehaviour:
   thrust: 3
   knockTime: 0.3
   damage: 0
-  gameOverPanel: {fileID: 0}
-  items: []
 --- !u!82 &-7651465100900788814
 AudioSource:
   m_ObjectHideFlags: 0
