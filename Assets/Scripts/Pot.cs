@@ -30,6 +30,7 @@ public class Pot : MonoBehaviour
     IEnumerator breakCo()
     {
         yield return new WaitForSeconds(.3f);
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 }

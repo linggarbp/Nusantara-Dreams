@@ -44,9 +44,9 @@ public class Enemy : MonoBehaviour
         }
         if (health <= 0)
         {
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
             //killPoint = killPoint + 100;
-            Destroy(gameObject);
+            //Destroy(gameObject);
             unlockSkill[0].SetActive(false);
             unlockSkill[1].SetActive(true);
             //gameManager.score = killPoint;

@@ -48,13 +48,6 @@ public class PlayerMovement : MonoBehaviour
         {
             audioManager.SfxStep();
         }
-        //else if (currentState != PlayerState.Walk &&
-        //    Input.GetKeyUp("w") ||
-        //    Input.GetKeyUp("a") ||
-        //    Input.GetKeyUp("s") ||
-        //    Input.GetKeyUp("d"))
-        //{
-        //}
 
         if (!DialogueManager.GetInstance().dialogueIsPlaying)
         {

@@ -25,7 +25,7 @@ public class AreaTransition : MonoBehaviour
 
     private void Update()
     {
-        if (starPointInventory.starPoints[0].numberHeld >= starReq && starPointInventory.starPoints[1].numberHeld >= pointReq && gateOpenable[1].activeSelf && gateOpenable[2].activeSelf && (gateOpenable[3].activeSelf || gateOpenable[4].activeSelf) || gateOpenable[5].activeSelf || gateOpenable[6].activeSelf)
+        if (starPointInventory.starPoints[0].numberHeld >= starReq && starPointInventory.starPoints[1].numberHeld >= pointReq && gateOpenable[1].activeSelf && gateOpenable[2].activeSelf && (gateOpenable[3].activeSelf || gateOpenable[4].activeSelf || gateOpenable[5].activeSelf || gateOpenable[6].activeSelf))
         {
             gateOpenable[0].SetActive(false);
         }

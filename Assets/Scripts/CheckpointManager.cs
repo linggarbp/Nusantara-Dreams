@@ -9,6 +9,8 @@ public class CheckpointManager : Checkpoint
     List<GameObject> playerHealth = new List<GameObject>();
     [SerializeField]
     GameObject retryPanel;
+    [SerializeField]
+    AudioManager audioManager;
     int health;
 
     // Start is called before the first frame update
@@ -32,6 +34,7 @@ public class CheckpointManager : Checkpoint
         }
         if (health == 0)
         {
+            audioManager.SfxStepStop();
             retryPanel.SetActive(true);
             Time.timeScale = 0f;
             Cursor.lockState = CursorLockMode.None;

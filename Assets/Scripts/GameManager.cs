@@ -10,8 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject ingamePanel;
-    private bool isInventoryActivePanel = false;
-    private bool isPauseActivePanel = false;
+    [SerializeField] private GameObject questPanel;
 
     [HideInInspector] public int score;
     [HideInInspector] public int star;
@@ -21,10 +20,16 @@ public class GameManager : MonoBehaviour
     public StarPointInventory StarPointInventory;
     //private Enemy totalScore;
 
+    private void Awake()
+    {
+        
+    }
+
     void Start()
     {
         inventoryPanel.SetActive(false);
         pausePanel.SetActive(false);
+        questPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         ingamePanel.SetActive(true);
@@ -42,18 +47,26 @@ public class GameManager : MonoBehaviour
         //Pause Game
         GamePause();
 
+        //Open Quest
+        if (Input.GetKeyDown(KeyCode.Q) && !inventoryPanel.activeSelf && !pausePanel.activeSelf && !questPanel.activeSelf)
+        {
+            questPanel.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Q) && questPanel.activeSelf)
+        {
+            questPanel.SetActive(false);
+        }
+
         //Open Inventory
-        if (Input.GetKeyDown(KeyCode.Tab) && !isInventoryActivePanel && !isPauseActivePanel)
+        if (Input.GetKeyDown(KeyCode.Tab) && !inventoryPanel.activeSelf && !pausePanel.activeSelf && !questPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);
-            isInventoryActivePanel = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Tab) && isInventoryActivePanel)
+        else if (Input.GetKeyDown(KeyCode.Tab) && inventoryPanel.activeSelf)
         {
             inventoryPanel.SetActive(false);
-            isInventoryActivePanel = false;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
@@ -61,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     void GamePause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isInventoryActivePanel && !isPauseActivePanel)
+        if (Input.GetKeyDown(KeyCode.Escape) && !inventoryPanel.activeSelf && !pausePanel.activeSelf)
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0f;

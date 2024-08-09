@@ -26,7 +26,7 @@ public class SwapGate : Gate
 
     private void Awake()
     {
-        
+
     }
 
     public SwapGate(bool state) : base(state) { }
@@ -198,27 +198,7 @@ public class SwapGate : Gate
     public void Swap()
     {
         IsItemExist();
-        if (ORGate == true && gateORAND == 1)
-        {
-            Interact();
-        }
-        else if (ANDGate == true && gateORAND == 2)
-        {
-            Interact();
-        }
-        else if (NORGate == true && gateNORNAND == 1)
-        {
-            Interact();
-        }
-        else if (NANDGate == true && gateNORNAND == 2)
-        {
-            Interact();
-        }
-        else if (XORGate == true && gateXORXNOR == 1)
-        {
-            Interact();
-        }
-        else if (XNORGate == true && gateXORXNOR == 2)
+        if ((ORGate && gateORAND == 1) || (ANDGate && gateORAND == 2) || (NORGate && gateNORNAND == 1) || (NANDGate && gateNORNAND == 2) || (XORGate && gateXORXNOR == 1) || (XNORGate && gateXORXNOR == 2))
         {
             Interact();
         }
@@ -277,7 +257,7 @@ public class SwapGate : Gate
         }
         Swap();
     }
-    
+
     public void GateNORNAND()
     {
         gateNORNAND++;

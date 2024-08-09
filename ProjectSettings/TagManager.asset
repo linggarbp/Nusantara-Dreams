@@ -11,6 +11,11 @@ TagManager:
   - Point
   - AreaTransition
   - Checkpoint
+  - One
+  - Two
+  - Three
+  - Four
+  - Five
   layers:
   - Default
   - TransparentFX
