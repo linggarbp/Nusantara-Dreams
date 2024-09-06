@@ -11,6 +11,7 @@ public class InteractSwitch : MonoBehaviour
     [SerializeField]
     private Switch switchToToggle;
     private bool playerInRange;
+    public DebriefingCount debriefingCount;
 
     private void Awake()
     {
@@ -23,8 +24,9 @@ public class InteractSwitch : MonoBehaviour
         if (playerInRange)
         {
             visualCue.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.F))
             {
+                debriefingCount.swapGateCount++;
                 switchToToggle.Interact();
                 bound.SetActive(false);
             }

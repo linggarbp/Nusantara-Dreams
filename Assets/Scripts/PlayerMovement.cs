@@ -49,16 +49,24 @@ public class PlayerMovement : MonoBehaviour
             audioManager.SfxStep();
         }
 
-        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        if (!DialogueManager.GetInstance().dialogueIsPlaying && !StoryManager.GetInstance().dialogueIsPlaying)
         {
             movement = Vector3.zero;
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
         }
-        if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack
-            && currentState != PlayerState.Stagger)
+        else
         {
-            if (!(!DialogueManager.GetInstance().dialogueIsPlaying && inventoryPanel.activeSelf))
+            audioManager.SfxStepStop();
+        }
+
+        if (Input.GetButtonDown("Attack") &&
+            currentState != PlayerState.Attack &&
+            currentState != PlayerState.Stagger)
+        {
+            if ((!DialogueManager.GetInstance().dialogueIsPlaying &&
+                !StoryManager.GetInstance().dialogueIsPlaying) &&
+                !inventoryPanel.activeSelf)
             {
                 StartCoroutine(AttackCo());
             }

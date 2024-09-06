@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwapGate : Gate
 {
     public PlayerInventory playerInventory;
+    public DebriefingCount swapCount;
 
     bool ORGate = false;
     bool ANDGate = false;
@@ -200,6 +201,7 @@ public class SwapGate : Gate
         IsItemExist();
         if ((ORGate && gateORAND == 1) || (ANDGate && gateORAND == 2) || (NORGate && gateNORNAND == 1) || (NANDGate && gateNORNAND == 2) || (XORGate && gateXORXNOR == 1) || (XNORGate && gateXORXNOR == 2))
         {
+            swapCount.swapGateCount++;
             Interact();
         }
     }

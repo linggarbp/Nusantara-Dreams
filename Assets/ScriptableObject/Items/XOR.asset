@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: XOR
   m_EditorClassIdentifier: 
   itemName: XOR Rune
-  itemDesc: 
+  itemDesc: Menghasilkan output true hanya jika salah satu input bernilai true.
   itemImage: {fileID: 21300000, guid: f1a791ff64c915c419b5b1526164bd3d, type: 3}
-  numberHeld: 1
+  numberHeld: 0
   usable: 0
   unique: 1
   thisEvent:

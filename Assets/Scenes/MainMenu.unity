@@ -1797,7 +1797,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Interaksi
+  m_text: Interaksi Objek
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
   m_sharedMaterial: {fileID: -5475696518824154773, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
@@ -1934,7 +1934,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Mode
 
-    Bebas'
+    Level'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
   m_sharedMaterial: {fileID: -5475696518824154773, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
@@ -3411,8 +3411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 247.59338, y: -105}
-  m_SizeDelta: {x: 495.1868, y: 70}
+  m_AnchoredPosition: {x: 247.59338, y: -113.572}
+  m_SizeDelta: {x: 495.187, y: 87.144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549206848
 MonoBehaviour:
@@ -3434,7 +3434,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Linggar Bhakti Pratama
+  m_text: 'Linggar Bhakti Pratama
+
+    Created in Unity'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
   m_sharedMaterial: {fileID: -5475696518824154773, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
@@ -5069,7 +5071,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 263.3122, y: -604.44446}
-  m_SizeDelta: {x: 485.062, y: 70}
+  m_SizeDelta: {x: 512.27, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1014756523
 MonoBehaviour:
@@ -5091,7 +5093,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ':       Esc'
+  m_text: ':         Q'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
   m_sharedMaterial: {fileID: -5475696518824154773, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
@@ -6855,7 +6857,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Menu Pause
+  m_text: Panel Misi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
   m_sharedMaterial: {fileID: -5475696518824154773, guid: c72c837cda58f1a47a91529b0a2bb642, type: 2}
@@ -7601,7 +7603,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 263.3122, y: -533.3334}
-  m_SizeDelta: {x: 491.5522, y: 70}
+  m_SizeDelta: {x: 512.16, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729559883
 MonoBehaviour:
@@ -8242,7 +8244,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 471528243}
         m_TargetAssemblyTypeName: SceneManagement, Assembly-CSharp
-        m_MethodName: PlayGameOne
+        m_MethodName: PlayGameStory
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueIcon;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
+
+    [SerializeField] AudioSource gibberishSound;
     //[SerializeField] private Animator portraitAnimator;
     //private Animator layoutAnimator;
 
@@ -112,6 +114,7 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory()
     {
+        gibberishSound.Play();
         if (currentStory.canContinue)
         {
             if (displayLineCoroutine != null)

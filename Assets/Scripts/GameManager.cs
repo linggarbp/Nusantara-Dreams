@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject ingamePanel;
     [SerializeField] private GameObject questPanel;
+    [SerializeField] private GameObject storyPanel;
 
     [HideInInspector] public int score;
     [HideInInspector] public int star;
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text starText;
     [SerializeField] TMP_Text pointText;
     public StarPointInventory StarPointInventory;
+    public PlayerInventory PlayerInventory;
+    public DebriefingCount debriefingCount;
     //private Enemy totalScore;
 
     private void Awake()
@@ -48,17 +51,26 @@ public class GameManager : MonoBehaviour
         GamePause();
 
         //Open Quest
-        if (Input.GetKeyDown(KeyCode.Q) && !inventoryPanel.activeSelf && !pausePanel.activeSelf && !questPanel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Q) &&
+            !inventoryPanel.activeSelf &&
+            !pausePanel.activeSelf &&
+            !questPanel.activeSelf &&
+            !storyPanel.activeSelf)
         {
             questPanel.SetActive(true);
         }
-        else if (Input.GetKeyDown(KeyCode.Q) && questPanel.activeSelf)
+        else if (Input.GetKeyDown(KeyCode.Q)
+            && questPanel.activeSelf)
         {
             questPanel.SetActive(false);
         }
 
         //Open Inventory
-        if (Input.GetKeyDown(KeyCode.Tab) && !inventoryPanel.activeSelf && !pausePanel.activeSelf && !questPanel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Tab) &&
+            !inventoryPanel.activeSelf &&
+            !pausePanel.activeSelf &&
+            !questPanel.activeSelf &&
+            !storyPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
@@ -74,7 +86,11 @@ public class GameManager : MonoBehaviour
 
     void GamePause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !inventoryPanel.activeSelf && !pausePanel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Escape) &&
+            !inventoryPanel.activeSelf &&
+            !pausePanel.activeSelf &&
+            !questPanel.activeSelf &&
+            !storyPanel.activeSelf)
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
@@ -93,12 +109,32 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
+        PlayerInventory.InventoryItems[0].numberHeld = 0;
+        PlayerInventory.InventoryItems[1].numberHeld = 0;
+        PlayerInventory.InventoryItems[2].numberHeld = 0;
+        PlayerInventory.InventoryItems[3].numberHeld = 0;
+        PlayerInventory.InventoryItems[4].numberHeld = 0;
+        PlayerInventory.InventoryItems[5].numberHeld = 0;
+        PlayerInventory.InventoryItems[6].numberHeld = 0;
+        StarPointInventory.starPoints[0].numberHeld = 0;
+        StarPointInventory.starPoints[1].numberHeld = 0;
+        debriefingCount.swapGateCount = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void MainMenu()
     {
+        PlayerInventory.InventoryItems[0].numberHeld = 0;
+        PlayerInventory.InventoryItems[1].numberHeld = 0;
+        PlayerInventory.InventoryItems[2].numberHeld = 0;
+        PlayerInventory.InventoryItems[3].numberHeld = 0;
+        PlayerInventory.InventoryItems[4].numberHeld = 0;
+        PlayerInventory.InventoryItems[5].numberHeld = 0;
+        PlayerInventory.InventoryItems[6].numberHeld = 0;
+        StarPointInventory.starPoints[0].numberHeld = 0;
+        StarPointInventory.starPoints[1].numberHeld = 0;
+        debriefingCount.swapGateCount = 0;
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }

@@ -10,6 +10,8 @@ public class CheckpointManager : Checkpoint
     [SerializeField]
     GameObject retryPanel;
     [SerializeField]
+    GameObject pausePanel;
+    [SerializeField]
     AudioManager audioManager;
     int health;
 
@@ -47,6 +49,7 @@ public class CheckpointManager : Checkpoint
         PlayerMovement.RespawnPlayer();
         PlayerMovement.playerHealth = 5;
         retryPanel.SetActive(false);
+        pausePanel.SetActive(false);
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

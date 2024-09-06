@@ -23,7 +23,7 @@ public class InteractGate : MonoBehaviour
         if (playerInRange)
         {
             visualCue.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.T))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 if (switchGate.gateListOR || switchGate.gateListAND)
                 {

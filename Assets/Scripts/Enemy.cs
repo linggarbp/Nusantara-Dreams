@@ -38,7 +38,8 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         sfxHit.Play();
-        if (enemyKillable[0].activeSelf && enemyKillable[1].activeSelf && (enemyKillable[2].activeSelf || enemyKillable[3].activeSelf || enemyKillable[4].activeSelf || enemyKillable[5].activeSelf))
+        if (enemyKillable[0].activeSelf && enemyKillable[1].activeSelf &&
+           (enemyKillable[2].activeSelf || enemyKillable[3].activeSelf || enemyKillable[4].activeSelf || enemyKillable[5].activeSelf))
         {
             health -= damage;
         }

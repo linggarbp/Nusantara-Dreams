@@ -13,12 +13,11 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
 
     private bool playerInRange;
-    //private bool playerInteractable;
+    public bool playerInteracted = false;
 
     private void Awake()
     {
         playerInRange = false;
-        //playerInteractable = true;
         visualCue.SetActive(false);
     }
 
@@ -31,7 +30,7 @@ public class DialogueTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                //playerInteractable = false;
+                playerInteracted = true;
                 bound.SetActive(false);
             }
         }

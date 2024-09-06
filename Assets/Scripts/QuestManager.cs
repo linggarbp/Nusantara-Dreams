@@ -6,11 +6,11 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     [SerializeField]
+    List<DialogueTrigger> dialogueTrigger = new List<DialogueTrigger>();
+    [SerializeField]
     PlayerInventory playerInventory;
     [SerializeField]
     StarPointInventory starPointInventory;
-    [SerializeField]
-    List<DialogueTrigger> dialogueManagerList = new List<DialogueTrigger>();
     [SerializeField]
     List<GameObject> skillActivated = new List<GameObject>();
     [SerializeField]
@@ -47,8 +47,11 @@ public class QuestManager : MonoBehaviour
     void QuestOne()
     {
         //Talk with Ghosto
-
-        textMissionOne[0].color = Color.green;
+        if (dialogueTrigger[0].playerInteracted == true &&
+            dialogueTrigger[1].playerInteracted == true)
+        {
+            textMissionOne[0].color = Color.green;
+        }
 
         //Find NOT Rune
         if (playerInventory.InventoryItems[6].numberHeld == 1)
@@ -129,8 +132,10 @@ public class QuestManager : MonoBehaviour
     void QuestTwo()
     {
         //Talk with Ghosto
-
-        textMissionTwo[0].color = Color.green;
+        if (dialogueTrigger[2].playerInteracted == true)
+        {
+            textMissionTwo[0].color = Color.green;
+        }
 
         //Find NOR Rune
         if (playerInventory.InventoryItems[2].numberHeld == 1)
@@ -197,17 +202,28 @@ public class QuestManager : MonoBehaviour
         {
             textMissionTwo[9].color = Color.green;
         }
+        if (textMissionTwo[9].text == "Kumpulkan 3 Bintang" && starPointInventory.starPoints[0].numberHeld >= 3)
+        {
+            textMissionTwo[9].color = Color.green;
+        }
         if (starPointInventory.starPoints[1].numberHeld >= 1400)
         {
             textMissionTwo[10].color = Color.green;
         }
+        if (textMissionTwo[10].text == "Kumpulkan 700 Poin" && starPointInventory.starPoints[1].numberHeld >= 700)
+        {
+            textMissionTwo[10].color = Color.green;
+        }
+
     }
 
     void QuestThree()
     {
         //Talk with Ghosto
-
-        textMissionThree[0].color = Color.green;
+        if (dialogueTrigger[3].playerInteracted == true)
+        {
+            textMissionThree[0].color = Color.green;
+        }
 
         //All element skill & monster
         if (skillActivated[6].activeSelf &&
@@ -246,7 +262,15 @@ public class QuestManager : MonoBehaviour
         {
             textMissionThree[5].color = Color.green;
         }
+        if (textMissionThree[5].text == "Kumpulkan 3 Bintang" && starPointInventory.starPoints[0].numberHeld >= 3)
+        {
+            textMissionThree[5].color = Color.green;
+        }
         if (starPointInventory.starPoints[1].numberHeld >= 2700)
+        {
+            textMissionThree[6].color = Color.green;
+        }
+        if (textMissionThree[6].text == "Kumpulkan 1300 Poin" && starPointInventory.starPoints[1].numberHeld >= 1300)
         {
             textMissionThree[6].color = Color.green;
         }
@@ -255,7 +279,10 @@ public class QuestManager : MonoBehaviour
     void QuestFour()
     {
         //Talk with Ghosto
-        textMissionFour[0].color = Color.green;
+        if (dialogueTrigger[4].playerInteracted == true)
+        {
+            textMissionFour[0].color = Color.green;
+        }
 
         //Find XOR Rune
         if (playerInventory.InventoryItems[4].numberHeld == 1)
@@ -322,7 +349,15 @@ public class QuestManager : MonoBehaviour
         {
             textMissionFour[9].color = Color.green;
         }
+        if (textMissionFour[9].text == "Kumpulkan 3 Bintang" && starPointInventory.starPoints[0].numberHeld >= 3)
+        {
+            textMissionFour[9].color = Color.green;
+        }
         if (starPointInventory.starPoints[1].numberHeld >= 3400)
+        {
+            textMissionFour[10].color = Color.green;
+        }
+        if (textMissionFour[10].text == "Kumpulkan 700 Poin" && starPointInventory.starPoints[1].numberHeld >= 700)
         {
             textMissionFour[10].color = Color.green;
         }
@@ -331,7 +366,11 @@ public class QuestManager : MonoBehaviour
     void QuestFive()
     {
         //Talk with Ghosto
-        textMissionFive[0].color = Color.green;
+        if (dialogueTrigger[5].playerInteracted == true &&
+            dialogueTrigger[6].playerInteracted == true)
+        {
+            textMissionFive[0].color = Color.green;
+        }
 
         //All element skill & monster
         if (skillActivated[14].activeSelf &&
@@ -372,7 +411,15 @@ public class QuestManager : MonoBehaviour
         {
             textMissionFive[5].color = Color.green;
         }
+        if (textMissionFive[5].text == "Kumpulkan 3 Bintang" && starPointInventory.starPoints[0].numberHeld >= 3)
+        {
+            textMissionFive[5].color = Color.green;
+        }
         if (starPointInventory.starPoints[1].numberHeld >= 5300)
+        {
+            textMissionFive[6].color = Color.green;
+        }
+        if (textMissionFive[6].text == "Kumpulkan 1900 Poin" && starPointInventory.starPoints[1].numberHeld >= 1900)
         {
             textMissionFive[6].color = Color.green;
         }
