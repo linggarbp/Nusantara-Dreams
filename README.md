@@ -1,6 +1,6 @@
-# Nusantara-Dreams
+# Nusantara-Dreams (main branch)
  2D Top Down RPG with Indonesian Culture Story
 
-# RuneLogica
+# RuneLogica (skripsi branch)
  2D Top Down RPG with Logic Gate Implementation
-https://drive.google.com/drive/folders/1-AAYgCkv0X81DphHiuFFlq-qObXJFHDH?usp=sharing
+\nhttps://drive.google.com/drive/folders/1-AAYgCkv0X81DphHiuFFlq-qObXJFHDH?usp=sharing
